@@ -9,8 +9,9 @@ public class Country implements Comparable<Country>{
 	private int medalGoldFemale;
 	private int medalSilverFemale; 
 	private int medalBronzeFemale;
-	
-	
+	private int combinationGold;
+	private int combinationSilver;
+	private int combinationBronze; 
 	
 	
 	public Country(String name, int medalGoldMale, int medalSilverMale, int medalBronzeMale, int medalGoldFemale,
@@ -23,8 +24,35 @@ public class Country implements Comparable<Country>{
 		this.medalGoldFemale = medalGoldFemale; 
 		this.medalSilverFemale = medalSilverFemale;
 		this.medalBronzeFemale = medalBronzeFemale;
+		this.combinationGold= medalGoldMale + medalGoldFemale;
+		this.combinationSilver = medalSilverMale + medalSilverFemale;
+		this.combinationBronze = medalBronzeMale + medalBronzeFemale; 
 	}
 	
+	public int getCombinationGold() {
+		return combinationGold;
+	}
+
+	public void setCombinationGold(int combinationGold) {
+		this.combinationGold = combinationGold;
+	}
+
+	public int getCombinationSilver() {
+		return combinationSilver;
+	}
+
+	public void setCombinationSilver(int combinationSilver) {
+		this.combinationSilver = combinationSilver;
+	}
+
+	public int getCombinationBronze() {
+		return combinationBronze;
+	}
+
+	public void setCombinationBronze(int combinationBronze) {
+		this.combinationBronze = combinationBronze;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -91,6 +119,5 @@ public class Country implements Comparable<Country>{
 		return result;
 	}
 
-	
 	
 }
